@@ -1,0 +1,15 @@
+set nocompatible            " disable compatibility to old-time vi
+set showmatch               " show matching brackets.
+set ignorecase              " case insensitive matching
+set hlsearch                " highlight search results
+set tabstop=2               " number of columns occupied by a tab character
+set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
+set expandtab               " converts tabs to white space
+set shiftwidth=2            " width for autoindents
+set autoindent              " indent a new line the same amount as the line just typed
+set number                  " add line numbers
+set encoding=utf-8
+set t_Co=256
+set laststatus=2
+set term=xterm-256color
+set termencoding=utf-8

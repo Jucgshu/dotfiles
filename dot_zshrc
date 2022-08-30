@@ -5,17 +5,21 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Aliases
+alias ls="ls -N --group-directories-first --color=auto"
+alias tmux="tmux new-session -A -s main"
+alias 'yayu'='yay -Syu --devel --noconfirm'
+alias mpv='gnome-session-inhibit mpv'
+
 export TERM="xterm-256color" 
 
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
-ZSH_CUSTOM=~/.oh-my-zsh/custom/
+ZSH=/usr/share/oh-my-zsh
+ZSH_CUSTOM=/usr/share/zsh-theme-powerlevel10k/
 
 # Theme to load
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=powerlevel10k
 
-# Change cursor to I-beam
-printf '\033[5 q\r'
 # Move prompt to the bottom
 #printf '\n%.0s' {1..100}
 
@@ -26,10 +30,6 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 plugins=(git docker)
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=fr_FR.UTF-8

@@ -1,6 +1,7 @@
 # Aliases
 alias ls='ls -N --group-directories-first --color=auto'
 alias l='ls -lah'
+alias vi='vim'
 alias tmux='tmux new-session -A -s main'
 alias yayu='yay -Syu --devel --noconfirm'
 alias mpv='gnome-session-inhibit mpv'

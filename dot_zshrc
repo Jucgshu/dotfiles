@@ -19,21 +19,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # OMZ configuration 
 DISABLE_AUTO_UPDATE="true"
-# DISABLE_AUTO_TITLE="true"
-# ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-# HIST_STAMPS="mm/dd/yyyy"
 plugins=(git docker)
-
-# You may need to manually set your language environment
-export LANG=fr_FR.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='gedit'
-fi
 
 # Dark colors for OMZ theme
 tput initc 0 172 196 200
@@ -55,20 +42,8 @@ tput initc 13 992 243 886
 tput initc 14 203 878 854
 tput initc 15 905 909 901
 
-# Add colors to man
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
-
-# Vim-Airline
-airline_powerline_fonts='1'
-airline_solarized_bg='dark'
+# Extend PATH.
+path=(~/bin $path)
 
 ZSH_CACHE_DIR=$HOME/.oh-my-zsh-cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
